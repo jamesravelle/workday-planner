@@ -15,10 +15,7 @@ textarea{
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-}
-
-textarea:focus{
-  border:0;
+  height:100%;
 }
 
 .jumbotron {
@@ -48,7 +45,7 @@ textarea:focus{
 .hour {
   background-color: #ffffff;
   color: #000000;
-  /* border-top: 1px dashed #000000; */
+  border-top: 1px dashed #000000;
   padding-top:30px;
 }
 
@@ -88,6 +85,11 @@ textarea:focus{
   font-family: "Font Awesome 5 Free"; /* This is the correct font-family*/
   font-weight:900;
 }
+
 .fa-save{
   cursor: pointer;
+}
+
+#currentDay{
+  font-weight:bold;
 }
