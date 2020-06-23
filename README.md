@@ -1,4 +1,4 @@
-# 05 Third-Party APIs: Work Day Scheduler
+# Work Day Scheduler
 
 Simple calendar web application that allows users to add daily work day tasks. Built using Javascript, jQuery and moment.js for the time. Tasks stored in local storage.
 
