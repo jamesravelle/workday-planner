@@ -22,7 +22,6 @@ if (storage === null){
         "4PM" : "",
         "5PM" : ""
     }
-    console.log(storage);
 }
 
 var future = false;
@@ -63,8 +62,6 @@ function timeBlock(time, data){
             row.addClass('future');
             row.removeClass('past');
         }
-        console.log(parseInt(time));
-        console.log(currentHour);
         if(parseInt(time) === currentHour){
             row.addClass('present');
             // Toggle future time block display
@@ -77,13 +74,11 @@ function timeBlock(time, data){
 // Create time blocks 9 AM to 5 PM
 for(key in storage){
     var data = storage[key];
-    console.log(data);
     timeBlock(key, data);
 }
 
 function setStorage(id,data){
     storage[id] = data;
-    console.log(storage);
     localStorage.setItem('storage', JSON.stringify(storage));
 }
 
