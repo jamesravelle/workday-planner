@@ -59,11 +59,13 @@ function timeBlock(time, data){
         }
         row.append(newCol);
         row.addClass('past');
-        if(future && time !== currentHour){
+        if(future && parseInt(time) !== currentHour){
             row.addClass('future');
             row.removeClass('past');
         }
-        if(time === currentHour){
+        console.log(parseInt(time));
+        console.log(currentHour);
+        if(parseInt(time) === currentHour){
             row.addClass('present');
             // Toggle future time block display
             future = true;
