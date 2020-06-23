@@ -93,3 +93,25 @@ textarea{
 #currentDay{
   font-weight:bold;
 }
+
+@media only screen and (max-width:767px){
+  .row{
+    border-radius:0;
+    height:auto;
+  }
+  
+  .saveBtn{
+    border-radius:0;
+    border:0;
+    padding:5px 0 5px 0;
+  }
+
+  .hour{
+    border:0;
+    padding:5px 0 5px 0;
+  }
+
+  .display-3{
+    font-size:40px;
+  }
+}
