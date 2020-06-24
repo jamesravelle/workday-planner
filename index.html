@@ -26,12 +26,18 @@
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
+      <div id="clock">
+        <div id="center-dot" class="hands"></div>
+        <div id="hour-hand" class="hands"></div>
+        <div id="minute-hand" class="hands"></div>
+        <div id="second-hand" class="hands"></div>
+      </div>
       <p id="currentDay" class="lead"></p>
       <a href="#" id="clear">[Clear All Data]</a>
     </header>
+    <div class="hideHeader">&#9650;&#9650;&#9650;&#9650;&#9650;</div>
     <div class="container">
-      <!-- Timeblocks go here -->
-
+      <!-- Timeblocks go here, created with jQuery loop -->
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>

@@ -5,8 +5,7 @@ var container = $('.container');
 var currentTime = moment().format('LT');
 var currentHour = parseInt(currentTime[0]+currentTime[1]);
 
-// Set current date in header
-$('#currentDay').text(moment().format('MMMM DD, YYYY') + "  /  " + moment().format('hh:mm'));
+
 
 // Get local storage object
 var storage = JSON.parse(localStorage.getItem('storage'));
@@ -98,4 +97,39 @@ $('#clear').on('click', function(e){
     location.reload();
 })
 
+// Clock
+var minute = 0;
+var seconds = 0;
+function setClock(){
+    // Set current date in header
+    $('#currentDay').text(moment().format('MMMM DD, YYYY') + "  /  " + moment().format('hh:mm'));
+
+    // Update clock
+    var longTime = moment().format('LTS');
+    console.log(longTime);
+    console.log(longTime.length)
+    if(longTime.length === 11){
+        minute = parseInt(longTime[3] + longTime[4]);
+        seconds = parseInt(longTime[6] + longTime[7]);
+    } else{
+        minute = parseInt(longTime[2] + longTime[3]);
+        seconds = parseInt(longTime[5] + longTime[6]);
+    }
+    $('#hour-hand').css("transform", "rotate("+ ((currentHour * 30) - 90) + "deg)");
+    $('#minute-hand').css("transform", "rotate("+ ((minute * 6) - 90) + "deg)");
+    $('#second-hand').css("transform", "rotate("+ ((seconds * 6) - 90) + "deg)");
+}
+setClock();
+setInterval(setClock, 1000);
+
+$('.hideHeader').on("click", function(){
+    console.log($('.hideHeader').html());
+    if($('.hideHeader').html() === "▲▲▲▲▲"){
+        $('.hideHeader').html("▼▼▼▼▼");
+    } else {
+        $('.hideHeader').html("▲▲▲▲▲");
+    }
+    
+    $('.jumbotron').slideToggle();
+})
 });

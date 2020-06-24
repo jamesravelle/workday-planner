@@ -18,12 +18,23 @@ textarea{
   height:100%;
 }
 
+.hideHeader{
+  width:100%;
+  background-color:black;
+  color:white;
+  margin-bottom:20px;
+  font-size:10px;
+  padding:5px;
+  text-align:center;
+  cursor:pointer;
+}
+
 .jumbotron {
   text-align: center;
-  background-color: transparent;
+  background-color: aquamarine;
   color: black;
   border-radius: 0;
-  border-bottom: 10px solid black;
+  margin-bottom:0;
 }
 
 .description{
@@ -114,4 +125,53 @@ textarea{
   .display-3{
     font-size:40px;
   }
+
+}
+
+#clock{
+  border:2px solid black;
+  border-radius:100%;
+  width:200px;
+  height:200px;
+  margin:10px auto;
+  position:relative;
+  background-color:white;
+}
+
+.hands{
+  position:absolute;
+  left:100px;
+  top:100px;
+  transform-origin: 0 50%;
+}
+
+#hour-hand{
+  border-bottom:4px solid black;
+  width:70px;
+  transform: rotate(80deg);
+  z-index:10;
+}
+
+#minute-hand{
+  border-bottom:2px solid black;
+  width:90px;
+  transform: rotate(120deg);
+  z-index:11;
+}
+
+#second-hand{
+  border-bottom:1px solid black;
+  width:95px;
+  transform: rotate(10deg);
+  z-index:12;
+}
+
+#center-dot{
+  width:10px;
+  margin-left:-5px;
+  margin-top:-5px;
+  height:10px;
+  background-color:black;
+  border-radius:100%;
+  z-index:13;
 }
