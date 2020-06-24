@@ -106,8 +106,6 @@ function setClock(){
 
     // Update clock
     var longTime = moment().format('LTS');
-    console.log(longTime);
-    console.log(longTime.length)
     if(longTime.length === 11){
         minute = parseInt(longTime[3] + longTime[4]);
         seconds = parseInt(longTime[6] + longTime[7]);
@@ -123,7 +121,6 @@ setClock();
 setInterval(setClock, 1000);
 
 $('.hideHeader').on("click", function(){
-    console.log($('.hideHeader').html());
     if($('.hideHeader').html() === "▲▲▲▲▲"){
         $('.hideHeader').html("▼▼▼▼▼");
     } else {
